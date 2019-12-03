@@ -31,19 +31,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6E-YO-r3z">
-                                <rect key="frame" x="182" y="136" width="50" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlH-d8-cPR">
+                                <rect key="frame" x="8" y="136" width="398" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6E-YO-r3z">
+                                        <rect key="frame" x="199" y="0.0" width="199" height="60"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fO-Ue-pn3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ium-um-wOQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="199" height="60"/>
+                                        <state key="normal" title="Get"/>
+                                        <connections>
+                                            <action selector="get:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpw-w1-rBc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="45F-eI-8OD"/>
-                                    <constraint firstAttribute="width" constant="50" id="PTf-ed-bd9"/>
+                                    <constraint firstItem="c6E-YO-r3z" firstAttribute="leading" secondItem="Ium-um-wOQ" secondAttribute="trailing" id="8KP-jP-UNE"/>
+                                    <constraint firstAttribute="height" constant="60" id="EC2-2g-ATI"/>
+                                    <constraint firstItem="Ium-um-wOQ" firstAttribute="top" secondItem="NlH-d8-cPR" secondAttribute="top" id="KKs-ru-6zF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ium-um-wOQ" secondAttribute="bottom" id="OVn-Cz-Pv4"/>
+                                    <constraint firstAttribute="trailing" secondItem="c6E-YO-r3z" secondAttribute="trailing" id="c5Y-e2-1ly"/>
+                                    <constraint firstAttribute="bottom" secondItem="c6E-YO-r3z" secondAttribute="bottom" id="nXF-BC-MhA"/>
+                                    <constraint firstItem="c6E-YO-r3z" firstAttribute="top" secondItem="NlH-d8-cPR" secondAttribute="top" id="rER-Kt-wpF"/>
+                                    <constraint firstItem="Ium-um-wOQ" firstAttribute="leading" secondItem="NlH-d8-cPR" secondAttribute="leading" id="rtA-YN-jWe"/>
+                                    <constraint firstItem="Ium-um-wOQ" firstAttribute="width" secondItem="NlH-d8-cPR" secondAttribute="width" multiplier="1/2" id="sEM-B2-VTt"/>
                                 </constraints>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fO-Ue-pn3"/>
-                                </connections>
-                            </button>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxI-ic-qNR">
-                                <rect key="frame" x="8" y="184" width="398" height="21"/>
+                                <rect key="frame" x="8" y="204" width="398" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,19 +83,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="MxI-ic-qNR" firstAttribute="top" secondItem="c6E-YO-r3z" secondAttribute="bottom" constant="8" id="0d3-f3-ACt"/>
                             <constraint firstItem="wgK-ex-L6W" firstAttribute="centerY" secondItem="MJD-yF-XE4" secondAttribute="centerY" id="1Dj-cS-0Fs"/>
                             <constraint firstItem="JKh-Zm-cqA" firstAttribute="leading" secondItem="4Ij-Bg-mMd" secondAttribute="trailing" constant="8" id="3xQ-WC-LG3"/>
-                            <constraint firstItem="c6E-YO-r3z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5lH-CF-0hO"/>
+                            <constraint firstItem="MxI-ic-qNR" firstAttribute="top" secondItem="NlH-d8-cPR" secondAttribute="bottom" constant="8" id="7VT-TH-OTU"/>
                             <constraint firstItem="MxI-ic-qNR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="IOR-kR-G0i"/>
+                            <constraint firstItem="NlH-d8-cPR" firstAttribute="top" secondItem="4Ij-Bg-mMd" secondAttribute="bottom" constant="8" id="IfI-p6-cz7"/>
+                            <constraint firstItem="NlH-d8-cPR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Lw4-ML-FNw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JKh-Zm-cqA" secondAttribute="trailing" constant="8" id="OOV-0M-pst"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wgK-ex-L6W" secondAttribute="trailing" constant="8" id="Obk-Wa-YwA"/>
                             <constraint firstItem="JKh-Zm-cqA" firstAttribute="centerY" secondItem="4Ij-Bg-mMd" secondAttribute="centerY" id="Ow5-i7-bzg"/>
-                            <constraint firstItem="c6E-YO-r3z" firstAttribute="top" secondItem="4Ij-Bg-mMd" secondAttribute="bottom" constant="8" id="RrR-f4-WLe"/>
                             <constraint firstItem="4Ij-Bg-mMd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a3i-u5-kBC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MxI-ic-qNR" secondAttribute="trailing" constant="8" id="eg9-Lo-okE"/>
                             <constraint firstItem="MJD-yF-XE4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fXE-Vu-wD3"/>
                             <constraint firstItem="wgK-ex-L6W" firstAttribute="leading" secondItem="MJD-yF-XE4" secondAttribute="trailing" constant="8" id="g9W-TD-MqD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NlH-d8-cPR" secondAttribute="trailing" constant="8" id="hez-Nd-oiX"/>
                             <constraint firstItem="MJD-yF-XE4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="jDp-fg-hMx"/>
                             <constraint firstItem="4Ij-Bg-mMd" firstAttribute="top" secondItem="MJD-yF-XE4" secondAttribute="bottom" constant="8" id="tAw-Fz-ZJg"/>
                         </constraints>

@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  DemoArchive
-//
-//  Created by Benjamin Dumont on 02/12/2019.
-//  Copyright © 2019 Axa France. All rights reserved.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
